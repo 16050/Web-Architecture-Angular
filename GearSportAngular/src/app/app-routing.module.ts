@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GearsComponent } from './components/gears/gears.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-import { SportComponent } from './components/sport/sport.component';
+import { SportsComponent } from './components/sports/sports.component';
 
 
 
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'sports',
-    component: SportComponent
+    component: SportsComponent
   },
   {
     path: 'gears',

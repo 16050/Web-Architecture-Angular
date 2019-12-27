@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GearsComponent } from './components/gears/gears.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-import { SportComponent } from './components/sport/sport.component';
+import { SportsComponent } from './components/sports/sports.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     GearsComponent,
     CategoriesComponent,
-    SportComponent,
+    SportsComponent,
   ],
   imports: [
     BrowserModule,

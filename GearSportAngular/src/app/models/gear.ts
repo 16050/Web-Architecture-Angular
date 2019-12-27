@@ -5,5 +5,6 @@ export interface Gear {
   description: string;
   image: string;
   link: string;
-  sport_id: number;
+  sport: string;
+  category: string;
 }
