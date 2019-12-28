@@ -15,10 +15,10 @@ export class SingleCategoryComponent implements OnInit {
   constructor(private route: ActivatedRoute, private categoryService: CategoryService, private router: Router) {}
 
   ngOnInit() {
-    this.getSingleSport();
+    this.getSingleCategory();
   }
 
-  getSingleSport()
+  getSingleCategory()
   {
     const id = this.route.snapshot.params['id'];
     this.categoryService.findOne(id).subscribe(single_category => this.single_category = single_category);

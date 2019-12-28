@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GearService } from '../../../services/gear.service';
 import { Gear } from '../../../models/gear';
 import { ActivatedRoute, Router } from '@angular/router';
+import {GearsComponent} from '../gears.component';
 
 @Component({
   selector: 'app-single-gear',
@@ -10,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SingleGearComponent implements OnInit {
 
-  single_gear: Gear[] = [];
+  gear: Gear;
 
   constructor(private route: ActivatedRoute, private gearService: GearService, private router: Router) {}
 
@@ -20,7 +21,8 @@ export class SingleGearComponent implements OnInit {
 
   getSingleGear()
   {
+    this.gear = new Gear();
     const id = this.route.snapshot.params['id'];
-    this.gearService.findOne(id).subscribe(single_gear => this.single_gear = single_gear );
+    this.gearService.findOne(4).subscribe(single_gear => this.gear = single_gear );
   }
 }

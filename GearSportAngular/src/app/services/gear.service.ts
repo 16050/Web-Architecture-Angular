@@ -13,8 +13,8 @@ export class GearService {
     return this.http.get<Gear[]>(this.apiURL);
   }
 
-  findOne(id) {
-    return this.http.get<Gear[]>(this.apiURL+'/'+id);
+  findOne(id: number) {
+    return this.http.get<Gear>(this.apiURL+'/'+id);
   }
 
 }
