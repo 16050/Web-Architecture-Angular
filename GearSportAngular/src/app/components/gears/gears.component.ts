@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {GearService} from '../../services/gear.service';
 import { Gear } from '../../models/gear';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-gear',
@@ -11,7 +12,7 @@ export class GearsComponent implements OnInit {
 
   gears: Gear[] = [];
 
-  constructor(private gearService: GearService) { }
+  constructor(private gearService: GearService, private router:Router) { }
 
   ngOnInit() {
     this.getGears();
@@ -22,4 +23,7 @@ export class GearsComponent implements OnInit {
     this.gearService.findAll().subscribe(gears => this.gears = gears);
   }
 
+  onViewGame(id) { // show on game
+    this.router.navigate(['/', +id]);
+  }
 }

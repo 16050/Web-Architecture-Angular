@@ -8,6 +8,9 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { SportsComponent } from './components/sports/sports.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SingleGearComponent } from './components/gears/single-gear/single-gear.component';
+import { SingleSportComponent } from './components/sports/single-sport/single-sport.component';
+import { SingleCategoryComponent } from './components/categories/single-category/single-category.component';
 
 
 @NgModule({
@@ -17,6 +20,9 @@ import { FormsModule } from '@angular/forms';
     GearsComponent,
     CategoriesComponent,
     SportsComponent,
+    SingleGearComponent,
+    SingleSportComponent,
+    SingleCategoryComponent,
   ],
   imports: [
     BrowserModule,

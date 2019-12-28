@@ -1,3 +1,6 @@
+import {Category} from './category';
+import {Sport} from './sport';
+
 export interface Gear {
   id?: number;
   name: string;

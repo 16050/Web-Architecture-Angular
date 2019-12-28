@@ -6,9 +6,15 @@ import {Gear} from '../models/gear';
   providedIn: 'root'
 })
 export class GearService {
+  apiURL="http://127.0.0.1:8000/api/";
 
   constructor(private http: HttpClient) { }
   findAll() {
-    return this.http.get<Gear[]>("http://127.0.0.1:8000/api/");
+    return this.http.get<Gear[]>(this.apiURL);
   }
+
+  findOne(id) {
+    return this.http.get<Gear[]>(this.apiURL+'/'+id);
+  }
+
 }
