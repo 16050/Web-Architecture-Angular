@@ -15,6 +15,9 @@ import { SingleCategoryComponent } from './components/categories/single-category
 import {GearService} from './services/gear.service';
 import {SportService} from './services/sport.service';
 import {CategoryService} from './services/category.service';
+import { NewGearComponent } from './components/gears/new-gear/new-gear.component';
+import { NewSportComponent } from './components/sports/new-sport/new-sport.component';
+import { NewCategoryComponent } from './components/categories/new-category/new-category.component';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import {CategoryService} from './services/category.service';
     SingleGearComponent,
     SingleSportComponent,
     SingleCategoryComponent,
+    NewGearComponent,
+    NewSportComponent,
+    NewCategoryComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,5 +4,6 @@
     <h2>{{ gear.category.name }}</h2>
     <img src="{{ gear.image }}" alt="">
     <a class="btn btn-success" (click)="showGear(gear.id)">See the product</a>
+    <a class="btn btn-primary" (click)="deleteGear(gear.id)">Delete</a>
   </tr>
 </div>

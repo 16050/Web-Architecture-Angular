@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CategoryService} from '../../../services/category.service';
 import { Category } from '../../../models/category';
 import { ActivatedRoute, Router } from '@angular/router';
+import {GearService} from '../../../services/gear.service';
 
 @Component({
   selector: 'app-single-category',
@@ -12,7 +13,7 @@ export class SingleCategoryComponent implements OnInit {
 
   category: Category;
 
-  constructor(private route: ActivatedRoute, private categoryService: CategoryService, private router: Router) {}
+  constructor(private route: ActivatedRoute, private categoryService: CategoryService, private gearService: GearService, private router: Router) {}
 
   ngOnInit() {
     this.getSingleCategory();
@@ -27,5 +28,11 @@ export class SingleCategoryComponent implements OnInit {
 
   showGear(id:any) {
     this.router.navigate(['gears', +id]);
+  }
+
+  deleteGear(id: any) { // delete game
+    this.gearService.delete(+id).subscribe((result => {
+      this.router.navigate(['gears']);
+    }));
   }
 }
