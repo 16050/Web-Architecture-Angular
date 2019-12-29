@@ -4,10 +4,11 @@ import {Sport} from './sport';
 export class Gear {
   id?: number;
   name: string;
-  gender: string;
-  description: string;
-  image: string;
-  link: string;
-  sport: Sport;
-  category: Category;
+  constructor(name: string,
+    gender: string,
+    description: string,
+    image: string,
+    link: string,
+    sport: any,
+    category: any){}
 }

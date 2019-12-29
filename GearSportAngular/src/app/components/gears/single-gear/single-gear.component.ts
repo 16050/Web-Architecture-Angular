@@ -21,8 +21,8 @@ export class SingleGearComponent implements OnInit {
 
   getSingleGear()
   {
-    this.gear = new Gear();
+    this.gear = new Gear('', '', '', '','', '','');
     const id = this.route.snapshot.params['id'];
-    this.gearService.findOne(4).subscribe(single_gear => this.gear = single_gear );
+    this.gearService.findOne(+id).subscribe(single_gear => this.gear = single_gear );
   }
 }
