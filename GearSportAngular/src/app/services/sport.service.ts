@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Sport} from '../models/sport';
-import {Gear} from '../models/gear';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +13,8 @@ export class SportService {
     return this.http.get<Sport[]>(this.apiURL);
   }
   
-  findOne(id) {
-    return this.http.get<Sport[]>(this.apiURL+'/'+id);
+  findOne(id: number) {
+    return this.http.get<Sport>(this.apiURL+id);
   }
 }
 

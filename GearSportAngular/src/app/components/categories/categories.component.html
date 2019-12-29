@@ -1,5 +1,4 @@
 <div class="categories">
   <tr *ngFor="let category of categories">
-    <h2>{{ category.name }}</h2>
-  </tr>
+    <h2><a (click)="showCategory(category.id)">{{ category.name }}</a></h2>
 </div>

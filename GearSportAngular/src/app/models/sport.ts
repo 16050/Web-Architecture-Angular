@@ -1,8 +1,7 @@
-import {Gear} from './gear';
-
-export interface Sport {
+export class Sport {
   id?: number;
   name: string;
-  description: string;
-  gears: Gear[];
+  constructor(name: string,
+              description: string,
+              gears: any){}
 }

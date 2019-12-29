@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SportService} from '../../../services/sport.service';
+import { SportService } from '../../../services/sport.service';
 import { Sport } from '../../../models/sport';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SingleSportComponent implements OnInit {
 
-  single_sport: Sport[] = [];
+  sport: Sport;
 
   constructor(private route: ActivatedRoute, private sportService: SportService, private router: Router) {}
 
@@ -20,7 +20,12 @@ export class SingleSportComponent implements OnInit {
 
   getSingleSport()
   {
+    this.sport = new Sport('', '', '');
     const id = this.route.snapshot.params['id'];
-    this.sportService.findOne(id).subscribe(single_sport => this.single_sport = single_sport);
+    this.sportService.findOne(+id).subscribe(single_sport => this.sport = single_sport);
+  }
+
+  showGear(id:any) {
+    this.router.navigate(['gears', +id]);
   }
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { GearService } from '../../../services/gear.service';
 import { Gear } from '../../../models/gear';
 import { ActivatedRoute, Router } from '@angular/router';
-import {GearsComponent} from '../gears.component';
 
 @Component({
   selector: 'app-single-gear',

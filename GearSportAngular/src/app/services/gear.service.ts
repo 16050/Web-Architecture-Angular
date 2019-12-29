@@ -16,5 +16,4 @@ export class GearService {
   findOne(id: number) {
     return this.http.get<Gear>(this.apiURL+id);
   }
-
 }

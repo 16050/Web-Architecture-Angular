@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SingleCategoryComponent implements OnInit {
 
-  single_category: Category[] = [];
+  category: Category;
 
   constructor(private route: ActivatedRoute, private categoryService: CategoryService, private router: Router) {}
 
@@ -20,7 +20,12 @@ export class SingleCategoryComponent implements OnInit {
 
   getSingleCategory()
   {
+    this.category = new Category('', '');
     const id = this.route.snapshot.params['id'];
-    this.categoryService.findOne(id).subscribe(single_category => this.single_category = single_category);
+    this.categoryService.findOne(+id).subscribe(single_category => this.category = single_category);
+  }
+
+  showGear(id:any) {
+    this.router.navigate(['gears', +id]);
   }
 }

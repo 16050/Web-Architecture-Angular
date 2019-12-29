@@ -1,1 +1,9 @@
-<p>single-category works!</p>
+<h1>{{ category.name }}</h1>
+<div class="gears">
+  <tr *ngFor="let gear of category.gears">
+    <h2>{{ gear.name }}</h2>
+    <h2>{{ gear.category.name }}</h2>
+    <img src="{{ gear.image }}" alt="">
+    <a class="btn btn-success" (click)="showGear(gear.id)">See the product</a>
+  </tr>
+</div>

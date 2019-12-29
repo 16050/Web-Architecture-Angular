@@ -23,7 +23,7 @@ export class GearsComponent implements OnInit {
     this.gearService.findAll().subscribe(gears => this.gears = gears);
   }
 
-  onViewGear(id:any) {
+  showGear(id:any) {
     this.router.navigate(['gears', +id]);
   }
 }

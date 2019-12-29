@@ -1,1 +1,10 @@
-<p>single-sport works!</p>
+<h1>{{ sport.name }}</h1>
+<p>{{ sport.description }}</p>
+<div class="gears">
+  <tr *ngFor="let gear of sport.gears">
+    <h2>{{ gear.name }}</h2>
+    <h2>{{ gear.category.name }}</h2>
+    <img src="{{ gear.image }}" alt="">
+    <a class="btn btn-success" (click)="showGear(gear.id)">See the product</a>
+  </tr>
+</div>

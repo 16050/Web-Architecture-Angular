@@ -1,7 +1,8 @@
 import {Gear} from './gear';
 
-export interface Category {
+export class Category {
   id?: number;
   name: string;
-  gears: Gear[];
+  constructor(name: string,
+    gears: any){}
 }

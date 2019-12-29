@@ -15,6 +15,6 @@ export class CategoryService {
   }
 
   findOne(id) {
-    return this.http.get<Sport[]>(this.apiURL+'/'+id);
+    return this.http.get<Category>(this.apiURL+id);
   }
 }
