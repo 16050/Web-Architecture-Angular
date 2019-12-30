@@ -3,20 +3,20 @@
     <div class="form-group row">
       <label for="name" class="col-sm-2 col-form-label">Nom</label>
       <div *ngIf="add" class="col-sm-10">
-        <input type="text" class="form-control" id="name" placeholder="Nom du jeu" name="name" ngModel required>
+        <input type="text" class="form-control" id="name" placeholder="gear name" name="name" ngModel required>
       </div>
       <div *ngIf="!add" class="col-sm-10">
-        <input type="text" class="form-control" id="name" placeholder="Nom du jeu" name="name" [(ngModel)]="gear.name" required>
+        <input type="text" class="form-control" id="name" placeholder="gear name" name="name" [(ngModel)]="gear.name" required>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="description" class="col-sm-2 col-form-label">Descrption</label>
       <div *ngIf="add" class="col-sm-10">
-        <input type="text" class="form-control" id="description" placeholder="Nom du jeu" name="description" ngModel required>
+        <input type="text" class="form-control" id="description" placeholder="gear description" name="description" ngModel required>
       </div>
       <div *ngIf="!add" class="col-sm-10">
-        <input type="text" class="form-control" id="description" placeholder="Nom du jeu" name="description" [(ngModel)]="gear.description" required>
+        <input type="text" class="form-control" id="description" placeholder="gear description" name="description" [(ngModel)]="gear.description" required>
       </div>
     </div>
 
@@ -39,18 +39,18 @@
     </div>
 
     <div class="form-group row">
-      <label for="sport_id" class="col-sm-2 col-form-label">Sport</label>
+      <label for="sport" class="col-sm-2 col-form-label">Sport</label>
       <div class="col-sm-10">
-        <select class="form-control" id="sport_id" name="sport_id" ngModel required>
+        <select class="form-control" id="sport" name="sport" ngModel required>
           <option *ngFor="let sport of sports" value= "{{sport.id}}" >{{sport.name}}</option>
         </select>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="category_id" class="col-sm-2 col-form-label">Category</label>
+      <label for="category" class="col-sm-2 col-form-label">Category</label>
       <div class="col-sm-10">
-        <select class="form-control" id="category_id" name="category_id" ngModel required>
+        <select class="form-control" id="category" name="category" ngModel required>
           <option *ngFor="let category of categories" value= "{{category.id}}" >{{category.name}}</option>
         </select>
       </div>
@@ -65,6 +65,16 @@
         <input type="text" class="form-control" id="image" placeholder="Url de l'image" name="image" [(ngModel)]="gear.image" required>
       </div>
     </div>
+
+   <div class="form-group row">
+     <label for="link" class="col-sm-2 col-form-label">Link</label>
+     <div *ngIf="add" class="col-sm-10">
+       <input type="text" class="form-control" id="link" placeholder="link to buy" name="link" ngModel required>
+     </div>
+     <div *ngIf="!add" class="col-sm-10">
+       <input type="text" class="form-control" id="link" placeholder="link to buy" name="link" [(ngModel)]="gear.link" required>
+     </div>
+   </div>
 
     <div class="form-group row">
       <div class="col-sm-10">

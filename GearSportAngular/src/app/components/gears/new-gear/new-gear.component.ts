@@ -14,8 +14,8 @@ import {CategoryService} from '../../../services/category.service';
   styleUrls: ['./new-gear.component.css']
 })
 export class NewGearComponent implements OnInit {
-  sports: Sport;
-  categories: Category;
+  sports: Sport[]=[];
+  categories: Category[]=[];
   gear: Gear;
   id = this.route.snapshot.params['id'];
   add: any;
@@ -45,8 +45,8 @@ export class NewGearComponent implements OnInit {
       gear = {
         name: form.value['name'],
         gender: form.value['gender'],
-        sport_id: form.value['sport_id'],
-        category_id: form.value['category_id'],
+        sport: form.value['sport'],
+        category: form.value['category'],
         image: form.value['image'],
         description: form.value['description'],
         link: form.value['link']
@@ -61,8 +61,8 @@ export class NewGearComponent implements OnInit {
       gear = {
         name: form.value['name'],
         gender: form.value['gender'],
-        sport_id: form.value['sport_id'],
-        category_id: form.value['category_id'],
+        sport: form.value['sport'],
+        category: form.value['category'],
         image: form.value['image'],
         description: form.value['description'],
         link: form.value['link']

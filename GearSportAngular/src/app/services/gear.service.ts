@@ -13,10 +13,6 @@ export class GearService {
     return this.http.get<Gear[]>(this.apiURL);
   }
 
-  findOne(id: number) {
-    return this.http.get<Gear>(this.apiURL+id);
-  }
-
   delete(id: number){
     return this.http.delete(this.apiURL + 'delete/gear/' + id);
   }
@@ -27,6 +23,10 @@ export class GearService {
 
   // Edit a game in database
   editGear(gear: any, id: number){
-    return this.http.put(this.apiURL + '' + id + '/edit', gear );
+    return this.http.put(this.apiURL + id + '/edit', gear);
+  }
+
+  findOne(id: number) {
+    return this.http.get<Gear>(this.apiURL+id);
   }
 }
