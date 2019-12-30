@@ -49,6 +49,10 @@ const routes: Routes = [
     component: NewGearComponent
   },
   {
+    path: 'gears/edit/:id',
+    component: NewGearComponent
+  },
+  {
     path: 'gears/:id',
     component: SingleGearComponent
   },

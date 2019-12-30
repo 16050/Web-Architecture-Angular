@@ -30,6 +30,10 @@ export class SingleSportComponent implements OnInit {
     this.router.navigate(['gears', +id]);
   }
 
+  editGear(id: any){ // edit game
+    this.router.navigate(['gears', 'edit', id]);
+  }
+
   deleteGear(id: any) { // delete game
     this.gearService.delete(+id).subscribe((result => {
       this.router.navigate(['gears']);
