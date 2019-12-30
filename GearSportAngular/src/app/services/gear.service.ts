@@ -20,4 +20,13 @@ export class GearService {
   delete(id: number){
     return this.http.delete(this.apiURL + 'delete/gear/' + id);
   }
+
+  addGear(gear: any){
+    return this.http.post(this.apiURL + 'new', gear);
+  }
+
+  // Edit a game in database
+  editGear(gear: any, id: number){
+    return this.http.put(this.apiURL + '' + id + '/edit', gear );
+  }
 }
